@@ -1,65 +1,46 @@
-# 🌡️ Système de Monitoring Intelligent de Température
-
-[![Language](https://img.shields.io/badge/Language-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![ENSI](https://img.shields.io/badge/ENSI-Projet%20IoT-red.svg)](https://www.ensi.tn)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+# Système de Monitoring Intelligent de Température
 
 > **Projet académique** - École Nationale des Sciences de l'Informatique (ENSI)  
 > Module: Programmation C | Thème: IoT & Contrôleur Climatique
 
-## 📋 Description
+## Description
 
 Système complet de monitoring de température pour le contrôle climatique dans différents environnements (serre, serveur, maison). Ce projet simule un contrôleur IoT avec alertes intelligentes et visualisation par heat map.
 
-## ✨ Fonctionnalités Complètes
+## Fonctionnalités Complètes
 
 ### Les 6 Tâches Principales
-- ✅ **Tâche 1**: Gestion de configuration depuis fichier
-- ✅ **Tâche 2**: Simulation de capteur (lecture CSV)
-- ✅ **Tâche 3**: Moteur de décision automatique
-- ✅ **Tâche 4**: Journalisation avec timestamps réels
-- ✅ **Tâche 5**: Système d'alerte à 3 niveaux
-- ✅ **Tâche 6**: Module statistiques et rapports
+
+- **Tâche 1**: Gestion de configuration depuis fichier
+- **Tâche 2**: Simulation de capteur (lecture CSV)
+- **Tâche 3**: Moteur de décision automatique
+- **Tâche 4**: Journalisation avec timestamps réels
+- **Tâche 5**: Système d'alerte à 3 niveaux
+- **Tâche 6**: Module statistiques et rapports
 
 ### Fonctionnalités Originales
-- 🎨 **Interface colorée** - Bannière ASCII + couleurs ANSI
-- 🗺️ **Heat Map temporel** - Visualisation 24h × locations
-- ⏰ **Timestamps corrects** - Chaque événement a sa vraie date
-- 🎯 **Alertes intelligentes** - 3 niveaux d'urgence
-- 📊 **Rapports formatés** - Export journal + statistiques
 
-## 🚀 Quick Start
+- **Interface colorée** - Bannière ASCII + couleurs ANSI
+- **Heat Map temporel** - Visualisation 24h × locations
+- **Timestamps corrects** - Chaque événement a sa vraie date
+- **Alertes intelligentes** - 3 niveaux d'urgence
+- **Rapports formatés** - Export journal + statistiques
+
+## Quick Start
 
 ### Compilation
+
 ```bash
 gcc -Wall -std=c99 -o monitor temperature_monitor_final.c -lm
 ```
 
 ### Exécution
+
 ```bash
 ./monitor
 ```
 
-## 📁 Structure du Projet
-
-```
-temperature-monitoring/
-├── temperature_monitor_final.c    # Code principal (~510 lignes)
-├── config.txt                     # Configuration (seuils)
-├── sensor_data.txt                # 100 lectures simulées
-├── Makefile                       # Build automation
-├── README.md                      # Cette documentation
-├── LICENSE                        # MIT License
-└── .gitignore                     # Fichiers à ignorer
-```
-
-**Fichiers générés après exécution:**
-```
-├── journal_evenements.txt         # Log avec dates réelles
-└── rapport_journalier.txt         # Synthèse statistique
-```
-
-## ⚙️ Configuration (config.txt)
+## Configuration (config.txt)
 
 Personnalisez les paramètres du système:
 
@@ -69,23 +50,23 @@ seuil_max=28.0              # Température maximale acceptable (°C)
 intervalle_mesure=5         # Intervalle entre mesures (secondes)
 ```
 
-## 🔔 Système d'Alerte
+## Système d'Alerte
 
 Le système évalue automatiquement chaque lecture et génère des alertes selon l'écart:
 
-| Niveau | Écart | Couleur | Description |
-|--------|-------|---------|-------------|
-| **Normal** | Dans les seuils | 🟢 Vert | Tout va bien |
-| **Avertissement** | 0-4°C | 🟡 Jaune | Attention requise |
-| **Alerte Modérée** | 4-8°C | 🟣 Magenta | Action nécessaire |
-| **Alerte Critique** | >8°C | 🔴 Rouge | Danger immédiat |
+| Niveau              | Écart           | Couleur    | Description       |
+| ------------------- | --------------- | ---------- | ----------------- |
+| **Normal**          | Dans les seuils | 🟢 Vert    | Tout va bien      |
+| **Avertissement**   | 0-4°C           | 🟡 Jaune   | Attention requise |
+| **Alerte Modérée**  | 4-8°C           | 🟣 Magenta | Action nécessaire |
+| **Alerte Critique** | >8°C            | 🔴 Rouge   | Danger immédiat   |
 
-## 📊 Exemple de Sortie
+## Exemple de Sortie
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║     🌡️  SYSTÈME DE MONITORING INTELLIGENT DE TEMPÉRATURE     ║
-║              ENSI - Projet IoT Contrôleur Climatique          ║
+║         SYSTÈME DE MONITORING INTELLIGENT DE TEMPÉRATURE     ║
+║              ENSI - Projet IoT Contrôleur Climatique         ║
 ╚══════════════════════════════════════════════════════════════╝
 
 ═══ INITIALISATION ═══
@@ -99,7 +80,7 @@ Le système évalue automatiquement chaque lecture et génère des alertes selon
 ═══ VISUALISATION HEAT MAP ═══
 
 ╔══════════════════════════════════════════════════════════════╗
-║              🌡️  HEAT MAP - TEMPÉRATURE TEMPORELLE           ║
+║                  HEAT MAP - TEMPÉRATURE TEMPORELLE           ║
 ╚══════════════════════════════════════════════════════════════╝
 
   Légende:  [■] <15°C  [■] 15-18°C  [■] 18-22°C  [■] 22-26°C  [■] 26-30°C  [■] >30°C
@@ -124,7 +105,7 @@ Le système évalue automatiquement chaque lecture et génère des alertes selon
   • rapport_journalier.txt (statistiques)
 ```
 
-## 📝 Exemple journal_evenements.txt
+## Exemple journal_evenements.txt
 
 Le journal utilise maintenant les **timestamps réels** de chaque lecture:
 
@@ -136,7 +117,7 @@ Le journal utilise maintenant les **timestamps réels** de chaque lecture:
 [2024-12-05 18:45:00] [SYSTÈME] Arrêt du monitoring | Valeur: 0.00
 ```
 
-## 🧪 Tests
+## Tests
 
 ```bash
 # Compiler avec warnings
@@ -155,50 +136,24 @@ cat journal_evenements.txt
 cat rapport_journalier.txt
 ```
 
-## 🎓 Concepts C Démontrés
+## Concepts C Démontrés
 
 Ce projet illustre plusieurs concepts importants:
 
-- ✅ **Structures** (`struct`) et énumérations (`enum`)
-- ✅ **Manipulation de fichiers** (`fopen`, `fgets`, `fprintf`)
-- ✅ **Parsing de chaînes** (`sscanf`, `strcmp`, `strftime`)
-- ✅ **Tableaux statiques** et gestion mémoire
-- ✅ **Pointeurs** et passage par référence
-- ✅ **Gestion du temps** (`time.h`, `localtime`)
-- ✅ **Codes ANSI** pour terminal coloré
+- **Structures** (`struct`) et énumérations (`enum`)
+- **Manipulation de fichiers** (`fopen`, `fgets`, `fprintf`)
+- **Parsing de chaînes** (`sscanf`, `strcmp`, `strftime`)
+- **Tableaux statiques** et gestion mémoire
+- **Pointeurs** et passage par référence
+- **Gestion du temps** (`time.h`, `localtime`)
+- **Codes ANSI** pour terminal coloré
 
-## 📦 Publier sur GitHub
-
-### 1. Initialiser le dépôt local
-
-```bash
-cd /chemin/vers/votre/projet
-git init
-git add .
-git commit -m "feat: Temperature monitoring system - ENSI IoT project"
-```
-
-### 2. Créer le dépôt sur GitHub
-
-1. Allez sur github.com
-2. Cliquez sur "New repository"
-3. Nom: `temperature-monitor-ensi`
-4. **Laissez vide** (pas de README/gitignore)
-5. Cliquez "Create repository"
-
-### 3. Pousser le code
-
-```bash
-git remote add origin https://github.com/VOTRE_USERNAME/temperature-monitor-ensi.git
-git branch -M main
-git push -u origin main
-```
-
-## 🔧 Maintenance
+## Maintenance
 
 ### Modifier les seuils
 
 Éditez `config.txt`:
+
 ```ini
 seuil_min=20.0
 seuil_max=30.0
@@ -207,31 +162,16 @@ seuil_max=30.0
 ### Ajouter des données
 
 Ajoutez des lignes dans `sensor_data.txt`:
+
 ```
 1733500000,25.5,55.0,NOUVELLE_LOCATION
 ```
 
 Format: `timestamp,température,humidité,location`
 
-## 👨‍💻 Auteur
+## Auteur
 
-**[Votre Nom]**  
+**[Med Aziz Ghorbel,Med Amine Ferjani ]**  
 École Nationale des Sciences de l'Informatique (ENSI)  
 Année Académique 2024-2025  
 Email: [votre.email@ensi.tn]
-
-## 📄 Licence
-
-MIT License - Libre d'utilisation pour projets académiques
-
-Copyright (c) 2025 [Votre Nom]
-
-## 🙏 Remerciements
-
-- ENSI - École Nationale des Sciences de l'Informatique
-- Département Informatique
-- Enseignants du module Programmation C
-
----
-
-**Version finale** avec heat map complet et journalisation correcte des timestamps ✨
