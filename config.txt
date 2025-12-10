@@ -1,0 +1,11 @@
+# Configuration du Système de Monitoring de Température
+# Fichier: config.txt
+
+seuil_min=18.0
+seuil_max=28.0
+intervalle_mesure=5
+alerte_niveau1_offset=2.0
+alerte_niveau2_offset=5.0
+alerte_niveau3_offset=8.0
+consecutive_alerts_threshold=3
+hysteresis=0.5
