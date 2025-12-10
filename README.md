@@ -171,7 +171,6 @@ Format: `timestamp,température,humidité,location`
 
 ## Auteur
 
-**[Med Aziz Ghorbel,Med Amine Ferjani ]**  
+**[Med Aziz Ghorbel, Med Amine Ferjani, Med Manar Essefi]**  
 École Nationale des Sciences de l'Informatique (ENSI)  
-Année Académique 2024-2025  
-Email: [votre.email@ensi.tn]
+Année Académique 2025-2026
