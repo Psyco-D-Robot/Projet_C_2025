@@ -110,8 +110,8 @@ void afficher_banniere(void)
 {
     printf("\n");
     printf(CYAN "╔══════════════════════════════════════════════════════════════╗\n" RESET);
-    printf(CYAN "║" BOLD "       SYSTÈME DE MONITORING INTELLIGENT DE TEMPÉRATURE     " RESET CYAN "║\n" RESET);
-    printf(CYAN "║" RESET "              ENSI - Projet IoT Contrôleur Climatique          " CYAN "║\n" RESET);
+    printf(CYAN "║" BOLD "         SYSTÈME DE MONITORING INTELLIGENT DE TEMPÉRATURE     " RESET CYAN "║\n" RESET);
+    printf(CYAN "║" RESET "             ENSI - Projet IoT Contrôleur Climatique          " CYAN "║\n" RESET);
     printf(CYAN "╚══════════════════════════════════════════════════════════════╝\n" RESET);
     printf("\n");
 }
@@ -464,7 +464,7 @@ void afficher_heatmap(void)
 
     printf("\n");
     printf(BOLD "╔══════════════════════════════════════════════════════════════╗\n" RESET);
-    printf(BOLD "║" CYAN "                HEAT MAP - TEMPÉRATURE TEMPORELLE           " RESET BOLD "║\n" RESET);
+    printf(BOLD "║" CYAN "                  HEAT MAP - TEMPÉRATURE TEMPORELLE           " RESET BOLD "║\n" RESET);
     printf(BOLD "╚══════════════════════════════════════════════════════════════╝\n" RESET);
     printf("\n");
 
@@ -569,7 +569,7 @@ int main()
     printf("┌─────────────────────────────────────────┐\n");
     printf("│ Lectures analysées    : %-15d │\n", stats.total_lectures);
     printf("│ Température moyenne   : %-13.2f°C │\n", stats.temp_moyenne);
-    printf("│ Amplitude             : %.1f - %.1f°C      │\n",
+    printf("│ Amplitude             : %.1f - %.1f°C   │\n",
            stats.temp_min, stats.temp_max);
     printf("│ Alertes totales       : %-15d │\n",
            stats.alertes_niveau1 + stats.alertes_niveau2 + stats.alertes_niveau3);
