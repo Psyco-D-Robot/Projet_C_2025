@@ -1,11 +1,7 @@
 /*
- * ============================================================================
  *  SYSTÈME DE MONITORING INTELLIGENT DE TEMPÉRATURE
  *  École Nationale des Sciences de l'Informatique (ENSI)
  *  Projet C - Contrôleur Climatique IoT
- * ============================================================================
- *  Version: 2.0 - Complete with HeatMap
- * ============================================================================
  */
 
 #include <stdio.h>
@@ -14,7 +10,7 @@
 #include <time.h>
 #include <math.h>
 
-// ========================= CONFIGURATION =========================
+//  CONFIGURATION
 #define MAX_READINGS 1000
 #define MAX_LINE 256
 #define CONFIG_FILE "config.txt"
@@ -39,7 +35,7 @@
 #define BG_ORANGE "\033[48;5;208m"
 #define BG_RED "\033[41m"
 
-// ========================= STRUCTURES =========================
+//  STRUCTURES
 
 typedef struct
 {
@@ -82,7 +78,7 @@ typedef struct
     double temperatures[24];
 } HeatMapRow;
 
-// ========================= VARIABLES GLOBALES =========================
+//  VARIABLES GLOBALES
 Config config;
 SensorReading readings[MAX_READINGS];
 int num_readings = 0;
@@ -92,7 +88,7 @@ FILE *log_file = NULL;
 HeatMapRow heatmap_data[10];
 int heatmap_row_count = 0;
 
-// ========================= PROTOTYPES =========================
+//  PROTOTYPES
 void afficher_banniere(void);
 int charger_configuration(const char *filename);
 int charger_donnees_capteur(const char *filename);
@@ -108,7 +104,7 @@ const char *niveau_to_color(NiveauAlerte niveau);
 const char *get_temp_color(double temp);
 char *timestamp_to_string(long ts);
 
-// ========================= IMPLÉMENTATION =========================
+//  IMPLÉMENTATION
 
 void afficher_banniere(void)
 {
