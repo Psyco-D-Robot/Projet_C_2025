@@ -526,7 +526,7 @@ void afficher_heatmap(void)
 /*
  * FONCTION PRINCIPALE
  */
-int main(int argc, char *argv[])
+int main()
 {
     afficher_banniere();
 
